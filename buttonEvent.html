@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draft html js dom</title>
+</head>
+
+<body>
+    <button id="orenge-btn" onclick="document.body.style.backgroundColor ='#FFA500'">Make Orenge</button>
+    <button id="blue-btn" onclick="makeBlue()">Make Blue</button>
+    <button id="yellow-btn">Make Yellow</button>
+    <button id="pink-btn">Make Pink</button>
+    <button id="purple-btn">Make Purple</button>
+    <button id="green-btn">Make Green</button>
+    <!-- scripts -->
+    <script>
+        function makeBlue() {
+            const blueBtn = document.getElementById('blue-btn')
+            document.body.style.backgroundColor = 'blue'
+        }
+        // yellow btn
+        const yellowBtn = document.getElementById('yellow-btn')
+        yellowBtn.onclick = makeYellow
+        function makeYellow() {
+            document.body.style.backgroundColor = 'yellow'
+        }
+        // pink btn
+        const pinkBtn = document.getElementById('pink-btn')
+        pinkBtn.addEventListener('click', makePink)
+        function makePink() {
+            document.body.style.backgroundColor = 'pink'
+        }
+        // purple btn
+        const purpleBtn = document.getElementById('purple-btn')
+        purpleBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'purple'
+        })
+        // make green
+        document.getElementById('green-btn').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'green'
+        })
+    </script>
+</body>
+
+</html>
